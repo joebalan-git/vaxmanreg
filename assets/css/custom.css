@@ -90,3 +90,7 @@ body{
 	display: none;
 	visibility: hidden;
 }
+
+.w-35{
+	width: 35%;
+}
