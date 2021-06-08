@@ -14,7 +14,7 @@ function populateUsers(users){
 	users.forEach((u) => {
 		$("#user-list tbody").append(
 			'<tr>'
-				+ '<td><button class="btn btn-secondary btn-primary-grad text-uppercase text-dark" type="button"></button></td>'
+				+ '<td><button class="btn btn-secondary btn-primary-grad text-uppercase text-dark" type="button" onclick="showUserDetails('+u.token+')"></button></td>'
 				+ '<td>'+u.token+'</td>'
 				+ '<td>'+u.name+'</td>'
 				+ '<td>'+u.yob+'</td>'
@@ -33,3 +33,17 @@ function searchUser(){
 }
 
 populateUsers(users);
+
+
+function showUserDetails(token){
+    let user = users.find(u => u.token == token);
+    if(user){
+        $('.detail-wrapper').removeClass('hidden');
+        
+        $('#form-token').val(user.token);
+        $('#form-name').val(user.name);
+        $('#form-mobile').val(user.mobile);
+        $('#form-govtId').val(user.govtId);
+        $('#form-secretCode').val(user.secretCode);
+    }
+}

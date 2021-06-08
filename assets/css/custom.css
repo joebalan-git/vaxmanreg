@@ -16,8 +16,10 @@ body{
     background-position: right center;
 }
 
-.table-override-wrapper{
+.table-override-wrapper, .detail-wrapper{
 	border: 1px solid #000;
+	max-width: 600px;
+    margin: 0px auto;
 }
 .table-override{
 	width: 100%;
@@ -75,7 +77,16 @@ body{
   }
 }
 
+.detail-wrapper label{
+	font-size: 0.85rem;
+}
 
-.detail-wrapper{
-	border: 1px solid #000;
+.detail-wrapper input{
+	font-size: 1.2rem;
+	padding: 0;
+}
+
+.hidden{
+	display: none;
+	visibility: hidden;
 }
